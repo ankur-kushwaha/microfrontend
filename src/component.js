@@ -1,7 +1,6 @@
 import React from 'react'
 
-import MicroFrontend from './MicroFrontend';
-
+import {MicroFrontend} from '../dist/index';
 import "./style.css";
 
 export default function App(props) {

@@ -1,10 +1,6 @@
-// import { Component } from 'react'
-import Module from './Module';
 import { h } from 'preact';
+import {MicroFrontendModule} from '../dist/index';
 import styles from "./style.css";
-// import ShadowDOM from "preact-shadow-dom";
-
-
 
 function App(props){
 
@@ -21,7 +17,7 @@ function App(props){
   
 }
 
-Module('x-greeting',{
+MicroFrontendModule('x-greeting',{
   props:['color','counter'],
   callbacks:['tapped'],
   styles
