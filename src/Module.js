@@ -1,10 +1,5 @@
-import register from 'preact-custom-element';
 import { h,render } from 'preact';
 import { useRef } from 'preact/hooks';
-
-
-
-
 
 function Module(name, options) {
   // let {callbacks,props}  = options;
@@ -27,7 +22,15 @@ function Module(name, options) {
             bubbles: true,
             detail: data,
             composed: true
-          }))
+          }));
+          if(callback.startsWith('on')){
+            ref.current.base.dispatchEvent(new CustomEvent(callback.substring(2), {
+              bubbles: true,
+              detail: data,
+              composed: true
+            }));
+          }
+          
         }
       }
 
@@ -62,7 +65,7 @@ function Module(name, options) {
         for(let value of this.attributes){
           newProps[value.name] = value.value;
         }
-        
+
         render(<Component2 {...newProps} />, this.mountPoint);
       }
 

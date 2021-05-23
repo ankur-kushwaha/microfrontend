@@ -29,10 +29,14 @@ export default function App(props) {
           },
         }}
         callbacks={{
-          onClick2:handleClick
+          tapped:handleClick
         }}
        />
-		  {/* <x-greeting color={{color:"red"}} counter={counter} ononClick2={handleClick} /> */}
+		  <x-greeting
+        color={JSON.stringify({color:"red"})}
+        counter={counter}
+        ontapped={handleClick}
+      />
     </div>
   );
 }

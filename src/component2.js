@@ -9,11 +9,10 @@ import styles from "./style.css";
 function App(props){
 
   const handleClick = ()=>{
-    props.onClick2({
+    props.tapped({
       counter:Number(props.counter)+1
     });
   }
-  
   return (  
     <div>
       <h1 onClick={handleClick} style={{ color: this.props.color?.color }}>Hello, World {this.props.counter}! </h1>
@@ -24,7 +23,7 @@ function App(props){
 
 Module('x-greeting',{
   props:['color','counter'],
-  callbacks:['onClick2'],
+  callbacks:['tapped'],
   styles
 })(App)
 
