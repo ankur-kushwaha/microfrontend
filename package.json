@@ -1,7 +1,7 @@
 {
-  "name": "@ankushwaha/microfrontend",
+  "name": "@ankur.kus1/microfrontend",
   "version": "0.1.0",
-  "description": "",
+  "description": "## CLI Commands",
   "source": "src/index.js",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
@@ -25,9 +25,6 @@
   },
   "author": "Zouhir <zouhir@zouhir.org>",
   "license": "MIT",
-  "peerDependencies": {
-    "preact": "^10.5.7"
-  },
   "devDependencies": {
     "@babel/core": "^7.0.0-0",
     "enzyme": "^3.11.0",
@@ -53,6 +50,19 @@
     "@babel/plugin-transform-react-jsx": "^7.14.3",
     "preact-custom-element": "^4.2.1",
     "preact-shadow-dom": "^1.0.1",
-    "react": "^17.0.2"
-  }
+    "react": "^17.0.2",
+    "preact": "^10.5.7"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankur-kushwaha/microfrontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ankur-kushwaha/microfrontend/issues"
+  },
+  "homepage": "https://github.com/ankur-kushwaha/microfrontend#readme"
 }
