@@ -1,6 +1,6 @@
 {
   "name": "@ankur.kus1/microfrontend",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "## CLI Commands",
   "source": "src/index.js",
   "main": "dist/main.js",
@@ -61,9 +61,7 @@
       "<rootDir>/tests/__mocks__/setupTests.js"
     ]
   },
-  "dependencies": {
-    
-  },
+  "dependencies": {},
   "directories": {
     "lib": "lib",
     "test": "tests"
