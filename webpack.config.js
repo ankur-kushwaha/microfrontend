@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports={
-    devtool:"inline-nosources-cheap-source-map",
+    devtool:"eval-source-map",
     mode:"development",
     entry:"./lib/index.js",
     externals: {
