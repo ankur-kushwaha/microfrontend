@@ -1,14 +1,32 @@
 {
-  "plugins": [
-    ["@babel/plugin-transform-react-jsx", {
-      "pragma": "h",
-      "pragmaFrag": "Fragment"
-    }]
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
   ],
   "env": {
-    "test": {
-      "presets": [
-        ["preact-cli/babel", { "modules": "commonjs" }]
+    "preact": {
+      "plugins": [
+        [
+          "module-resolver",
+          {
+            "root": [
+              "."
+            ],
+            "alias": {
+              "react": "preact-compat",
+              "react-dom": "preact-compat",
+              "create-react-class": "preact-compat/lib/create-react-class",
+              "react-dom-factories": "preact-compat/lib/react-dom-factories"
+            }
+          }
+        ],
+        [
+          "@babel/plugin-transform-react-jsx",
+          {
+            "pragma": "h",
+            "pragmaFrag": "Fragment"
+          }
+        ]
       ]
     }
   }
